@@ -3,9 +3,9 @@
 # Copie les fichiers avec rsync en excluant .git/*
 
 if [[ $1 != "" ]] ; then
-	rsync -e ssh -vrz  --progress --delete-after -f"- .git/" . $1
+	rsync -e ssh -vrz  --progress --delete-after -f"- .git/" $1 $2
 else
-	echo -e "Usage: rsync_git {server}\n"
-	echo -e "Example: rsync_git user@server.fqdn:/directory\n";
+	echo -e "Usage: rsync_git {source} {destination}\n"
+	echo -e "Example: rsync_git .  user@server.fqdn:/directory\n";
 	exit 1
 fi
