@@ -28,6 +28,9 @@ alias upgrade='apt-get update && apt-get upgrade && apt-get clean'
 alias install='apt-get install'
 alias remove='apt-get remove'
 
+# Renvoi le chemin absolu d'un fichier
+alias abso='readlink -f $1'
+
 # Reviens à faire  cp /etc/apache2/apache2.conf /etc/apache2/apache2.conf.bak 
 function cpb() { cp $@{,.bak} ;}
 
