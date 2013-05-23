@@ -20,7 +20,7 @@ if args.example == True:
 	print "Usage example :"
 	print "You want to rename the txt files starting with 'test' keeping their numbers."
 	print "Before : 'test file 001.txt'	=>	After : 'new_filename001.txt'"
-	print "For this : renamex.py -f 'test*.txt' -p '^test.*([0-9]{3})\.txt$' -r 'new_filename\1.txt'" 
+	print "For this : renamex.py -f 'test*.txt' -p '^test.*([0-9]{3})\.txt$' -r 'new_filename\g<1>.txt'" 
 	sys.exit(0) 
 
 
